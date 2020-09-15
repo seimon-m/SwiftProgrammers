@@ -11,8 +11,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let data = DataProvider(names: ["Jonas", "Simon", "Velo", "Jonas", "Simon", "Velo"])
+        let data = DataProvider()
         
         let label = UILabel(frame: CGRect(x: 0, y: 200, width: 415, height: 50))
         label.text = "Swift Programmierer"
@@ -21,18 +20,32 @@ class ViewController: UIViewController {
         label.font = .boldSystemFont(ofSize: 25)
         self.view.addSubview(label)
         
-        let numberOfNames = data.memberNames.capacity
-        let grid = 400 / numberOfNames
-        var startY = 400
-        for name in data.memberNames {
-            let label = UILabel(frame: CGRect(x: 0, y: startY, width: 415, height: 50))
-            label.text = name
-            label.textAlignment = .center
-            label.textColor = .magenta
-            label.font = .boldSystemFont(ofSize: 25)
-            startY += grid
-            self.view.addSubview(label)
+        for (index, name) in data.memberNames.enumerated() {
+            addLabel(name: name, position: index)
         }
+    }
+    
+    func addLabel(name: String, position: Int) {
+        let yPosition = position * 50 + 400
+        let color : UIColor
+        switch position {
+        case 0, 3, 6:
+            color = .magenta
+        case 1, 4, 7:
+            color = .blue
+        case 2, 5, 8:
+            color = .purple
+        default:
+            color = .black
+        }
+        
+        
+        let label = UILabel(frame: CGRect(x: 0, y: yPosition, width: 415, height: 50))
+        label.text = name
+        label.textAlignment = .center
+        label.textColor = color
+        label.font = .boldSystemFont(ofSize: 25)
+        self.view.addSubview(label)
     }
 
 
@@ -41,8 +54,8 @@ class ViewController: UIViewController {
 class DataProvider {
     var memberNames : [String]
     
-    init(names : [String]) {
-        self.memberNames = names
+    init() {
+        self.memberNames = ["Jonas", "Simon", "Jirawat", "Wanda", "Ben", "Ruedi"]
     }
 }
 
