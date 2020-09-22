@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let usePersonData = true
+    let usePersonData = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         label.textColor = .magenta
         label.font = .boldSystemFont(ofSize: 35)
         self.view.addSubview(label)
+        
         if usePersonData {
             for (index, person) in dataProvider.memberPersons.enumerated() {
                 addLabel(person: person, position: index)
@@ -87,7 +88,7 @@ class DataProvider {
     var memberNames : [String]
     var memberPersons : [Person]
     
-    init() {
+    private init() {
         self.memberNames = ["Jonas", "Simon", "Jirawat", "Wanda", "Ben", "Ruedi"]
         self.memberPersons = [Person(firstName: "Jonas", lastName: "Wolter", plz: 6003),
                               Person(firstName: "Simon", lastName: "Müller", plz: 3250),
@@ -97,7 +98,7 @@ class DataProvider {
     }
 }
 
-class Person {
+struct Person {
     var firstName : String
     var lastName : String
     var plz : Int
