@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F411EFA0252E589F000C83F6 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F411EF9F252E589E000C83F6 /* Person.swift */; };
+		F411EFA3252E58C2000C83F6 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F411EFA2252E58C2000C83F6 /* DataProvider.swift */; };
 		F45D2EC62510EF9C00234A2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45D2EC52510EF9C00234A2F /* AppDelegate.swift */; };
 		F45D2EC82510EF9C00234A2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45D2EC72510EF9C00234A2F /* SceneDelegate.swift */; };
 		F45D2ECA2510EF9C00234A2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45D2EC92510EF9C00234A2F /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F411EF9F252E589E000C83F6 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		F411EFA2252E58C2000C83F6 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		F45D2EC22510EF9C00234A2F /* SwiftProgrammers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProgrammers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45D2EC52510EF9C00234A2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F45D2EC72510EF9C00234A2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				F45D2ECE2510EF9D00234A2F /* Assets.xcassets */,
 				F45D2ED02510EF9D00234A2F /* LaunchScreen.storyboard */,
 				F45D2ED32510EF9D00234A2F /* Info.plist */,
+				F411EF9F252E589E000C83F6 /* Person.swift */,
+				F411EFA2252E58C2000C83F6 /* DataProvider.swift */,
 			);
 			path = SwiftProgrammers;
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			files = (
 				F45D2ECA2510EF9C00234A2F /* ViewController.swift in Sources */,
 				F45D2EC62510EF9C00234A2F /* AppDelegate.swift in Sources */,
+				F411EFA3252E58C2000C83F6 /* DataProvider.swift in Sources */,
+				F411EFA0252E589F000C83F6 /* Person.swift in Sources */,
 				F45D2EC82510EF9C00234A2F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

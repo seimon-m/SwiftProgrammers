@@ -79,33 +79,6 @@ class ViewController: UIViewController {
         labelPlz.font = .boldSystemFont(ofSize: 25)
         self.view.addSubview(labelPlz)
     }
-
-
 }
 
-class DataProvider {
-    static let sharedInstance = DataProvider()
-    var memberNames : [String]
-    var memberPersons : [Person]
-    
-    private init() {
-        self.memberNames = ["Jonas", "Simon", "Jirawat", "Wanda", "Ben", "Ruedi"]
-        self.memberPersons = [Person(firstName: "Jonas", lastName: "Wolter", plz: 6003),
-                              Person(firstName: "Simon", lastName: "Müller", plz: 3250),
-                              Person(firstName: "Jirawat", lastName: "Sae-Tang", plz: 2504),
-                              Person(firstName: "Wanda", lastName: "Lao", plz: 6003),
-                              Person(firstName: "Ruedi", lastName: "Arnold", plz: 0000)]
-    }
-}
 
-struct Person {
-    var firstName : String
-    var lastName : String
-    var plz : Int
-    
-    init(firstName: String, lastName: String, plz: Int) {
-        self.firstName = firstName
-        self.lastName = lastName
-        self.plz = plz
-    }
-}
