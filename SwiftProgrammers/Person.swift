@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Person {
+class Person {
     var firstName : String
     var lastName : String
     var plz : Int
